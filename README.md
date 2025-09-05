@@ -242,4 +242,5 @@ Se utiliza *Seaborn Heatmap* para mostrar la matriz com una imagen conde cada fi
 
 ### El modelo finalmente tiene una exactitud entre el 80% y el 84%  en la identificación si un correo es HAM o SPAM, ya que se tiene una variabilidad en la seleccion de los datos de entrenamiento.
 ---
-
+## Link de repositorio: https://github.com/AlejandroE207/MachineLearning.git 
+---
