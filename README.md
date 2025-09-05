@@ -59,9 +59,12 @@ Se crea la funcion la cual resive como parametro el valor del dominio, identific
 def clasificar_dominio_5r(dominio):
     muy_confiables = ["gmail.com", "yahoo.com"]
     confiables = ["hotmail.com", "outlook.com", "protonmail.com"]
-    neutrales = ["zoho.com", "tutanota.com", "icloud.com", "aol.com", "mail.com", "empresa.org", "exito.com"]
+    neutrales = ["zoho.com", "tutanota.com", "icloud.com", "aol.com",
+                  "mail.com", "empresa.org", "exito.com"]
     sospechosos = ["secure-mail.net", "fakebank.co", "securepay.net"]
-    muy_sospechosos = ["freemail.xyz", "ofertas123.com", "trabajo-rápido.org", "noticiaslive.co", "exit0.com"]
+    muy_sospechosos = ["freemail.xyz", "ofertas123.com",
+                      "trabajo-rápido.org", "noticiaslive.co",
+                      "exit0.com"]
 
     if dominio in muy_confiables:
         return 1
@@ -114,8 +117,10 @@ La función recibe como parametro el URL anexado en el correo, busca substring s
 ```Python
 def clasificar_url_5r(url):
     url = str(url).lower()
-    muy_sospechosos = ["phishing", "malicious", "freegift", "getprize", "lottery", ".xyz", ".biz", ".io", ".co", ".win"]
-    sospechosos = ["secure-login", "freemoney", "discountzone", "investcrypto", "promo"]
+    muy_sospechosos = ["phishing", "malicious", "freegift", "getprize",
+                      "lottery", ".xyz", ".biz", ".io", ".co", ".win"]
+    sospechosos = ["secure-login", "freemoney", "discountzone",
+                  "investcrypto", "promo"]
     neutro = [".com", ".org", ".net", "bank", "offer"]
 
     if any(s in url for s in muy_sospechosos):
@@ -137,8 +142,9 @@ df = df.drop(columns=["UrlsIndexados"])
 ### Transformación de campos Bool
 El objetivo de este bloque de codigo es convertir los features booleanos (True/False) en bit (1/0) por medio del metodo *astype(in)*.
 ```Python
-columnas_bool = ["CorreoConTLS", "ArchivosAdjuntosPeligrosos", "OfertasIrreales",
-                 "ImagenesCodigoOculto", "HeaderRemitenteFalso", "ContenidoSensible"]
+columnas_bool = ["CorreoConTLS", "ArchivosAdjuntosPeligrosos",
+                "OfertasIrreales", "ImagenesCodigoOculto",
+                "HeaderRemitenteFalso", "ContenidoSensible"]
 
 for col in columnas_bool:
     df[col] = df[col].astype(int)
@@ -157,7 +163,7 @@ print("✅ Dataset convertido y listo para regresión logística")
 print(df.head())
 ```
 ---
-## :chart_with_upwards_trend: 2. Regresión Logistica
+## 2. Regresión Logistica
 ### Importaciones
 Inicialmente se importan librerias como *pandas* para el manejo de tablas, *train_test_split* para partir los datos en conjuntos de entrenamiento y de prueba, *logisticRegression* el modelo para aplicar regresión logistica al dataset, entre otras.
 ```Python
