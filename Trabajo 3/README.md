@@ -131,3 +131,6 @@ plt.title("Diagrama del Árbol de Decision")
 plt.show()
 ```
 <img width="1919" height="1027" alt="image" src="https://github.com/user-attachments/assets/bcfed2fa-1e9d-41b9-a98d-672428ee108a" />
+
+---
+# Link de repositorio: https://github.com/AlejandroE207/MachineLearning/tree/main/Trabajo%203 
